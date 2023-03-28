@@ -1,70 +1,31 @@
 #include "main.h"
 
 /**
- * print_char - prints a character
- * @arg: argument to print
+ * get_func - Structure
+ * @a: character.
+ *
+ * Return: 0
  */
-void print_char(va_list arg)
+
+int (*get_func(const char a))(va_list)
 {
-	char c = va_arg(arg, int);
+	print_f printf[] = {
+		{ 'c', print_char },
+		{ 's', print_string },
+		{ 'd', print_decimal},
+		{ 'i', print_integer},
+		{ '\0', NULL},
+	};
 
-	_putchar(c);
-}
+	int h;
 
-/**
- * print_string - prints a string
- * @arg: argument to print
- */
-void print_string(va_list arg)
-{
-	char *str = va_arg(arg, char *);
-
-	if (!str)
-		str = "(null)";
-
-	while (*str)
+	for (h = 0; printf[h].p != '\0'; h++)
 	{
-		_putchar(*str);
-		str++;
+		if (printf[h].p == a)
+		{
+			return (printf[h].f);
+		}
 	}
-}
-/**
- * print_percent - prints a percent sign
- * @arg: argument (unused)
- */
 
-void print_percent(__attribute__((unused)) va_list arg)
-{
-	_putchar('%');
-}
-
-/**
- * print_decimal - prints decimal
- * @args: arguments list
- * Return: number of characters printed
- */
-
-int print_decimal(va_list args)
-{
-	int n = va_arg(args, int), count = 0;
-	if (n < 0)
-	{
-		_putchar('-');
-		count++;
-		n = -n;
-	}
-	if (n / 10)
-		count += print_decimal(args);
-	_putchar(n % 10 + '0');
-	count++;
-	return (count);
-}
-/**
- * print_integer - prints integer
- * @args: arguments list
- * Return: number of characters printed
- */
-int print_integer(va_list args)
-{
-	return (print_decimal(args));
+	return (0);
 }
