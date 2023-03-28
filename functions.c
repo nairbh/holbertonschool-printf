@@ -25,3 +25,30 @@ int print_char(va_list list)
 	_putchar(va_arg(list, int));
 	return (1);
 }
+
+
+void print_percent(int *count)
+{
+        write(1, "%", 1);
+
+                (*count)++;
+}
+
+
+void print_string(char *str, ...)
+{
+        va_list args;
+
+        va_start(args, str);
+
+        int *count = va_arg(args, int *);
+
+        while (*str != '\0')
+        {
+                write(1, str, 1);
+                str++;
+                (*count)++;
+        }
+
+        va_end(args);
+}

@@ -1,26 +1,25 @@
-#ifndef PRINTF
-#define PRINTF
+#ifndef _MAIN_H
+#define _MAIN_H
 
-#include <stdio.h>
-#include <stdlib.h>
 #include <stdarg.h>
-#include <limits.h>
+#include <stdio.h>
 #include <unistd.h>
-#include <stdstring>
+#include <stdlib.h>
+#include <limits.h>
+#include <string.h>
 
 /**
- * strut types - Structure for printf
- * @p: pointers to characteres
- * @func: function pointer to print fucntions
- */
+* struct func_type - struct de function printf
+* @t: chararcter
+* @f: pointer to function
+*/
 
-typedef struct types
-{
-	char p;
-	int (*func)(va_list);
-} print_f;
-
-int _printf(const char *format, ...);
 int _putchar(char c);
-
-#endif
+int _printf(const char *format, ...);
+void print_char(va_list arg);
+void print_string(va_list arg);
+void print_percent(va_list arg);
+int print_decimal(va_list args);
+int print_integer(va_list args);
+int print_unsigned_(va_list args);
+#endif /* _MAIN_H */
