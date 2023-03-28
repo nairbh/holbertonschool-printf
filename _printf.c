@@ -1,51 +1,49 @@
 #include "main.h"
-
+#include <stdarg.h>
 /**
- * _printf - printf function.
- * @format: variable
- * 
- * Return: values printed.
+ * _printf - function prinft
+ *  @format: pointer arugument
+ * Return: print_string
  */
-
 int _printf(const char *format, ...)
 {
-	va_list list;
-	unsigned int i = 0, char_num = 0;
+	unsigned int i = 0;
+	int count = 0;
+	int (*f)(va_list);
+	va_list args;
 
-	if (!format)
+	va_start(args, format);
+
+	if (format == NULL)
 		return (-1);
-
-	va_start(list, format);
-	for (i = 0; format[i] != '\0'; i++)
+	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-
-			else if (format[i + 1] == '%')
+			if (format[i + 1])
 			{
-				_putchar('%');
-				char_num++;
+				f = get_op_func(&format[i + 1]);
+				if (f == NULL)
+				{
+					count += _putchar(format[i]);
+					count += _putchar(format[i + 1]);
+				}
+				else
+				{
+					count += f(args);
+				}
 				i++;
-			}
-			else if (get_func(format[i + 1]) != NULL)
-			{
-				char_num += (get_func(format[i + 1]))(list);
-				i++;
-			}
-			else
-			{
-				_putchar(format[i]);
-				char_num++;
 			}
 		}
 		else
 		{
 			_putchar(format[i]);
-			char_num++;
+			count++;
 		}
+		i++;
 	}
-	va_end(list);
-	return (char_num);
+	va_end(args);
+	return (count);
 }
