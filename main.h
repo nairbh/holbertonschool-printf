@@ -14,12 +14,20 @@
 * @f: pointer to function
 */
 
+typedef struct types
+{
+	char p;
+	int (*f)(va_list);
+} print_f;
+
 int _putchar(char c);
 int _printf(const char *format, ...);
-void print_char(va_list arg);
-void print_string(va_list arg);
-void print_percent(va_list arg);
+int print_char(va_list arg);
+int print_string(va_list arg);
+int print_percent(va_list arg);
 int print_decimal(va_list args);
 int print_integer(va_list args);
 int print_unsigned_(va_list args);
+int (*get_func(const char a))(va_list);
+
 #endif /* _MAIN_H */
