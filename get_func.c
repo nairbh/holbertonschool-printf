@@ -1,28 +1,28 @@
 #include "main.h"
 
 /**
- *get_op_func - select the function
- *@format : format de argument printf
- *Return: NULL if format is NUll
+ * get_func - selects the correct function to use based on the format specifier
+ * @format: format specifier
+ *
+ * Return: pointer to the correct function, or NULL
  */
-int (*get_op_func(const char *format))(va_list)
+int (*get_func(const char *format))(va_list)
 {
-	int h;
-	print_f printf[] = {
+	int i;
+
+	print_f funcs[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
 		{"d", print_decimal},
 		{"i", print_decimal},
-		{NULL, NULL}};
+		{NULL, NULL}
+	};
 
-	for (h = 0; printf[h].p; h++)
+	for (i = 0; funcs[i].p != NULL; i++)
 	{
-		if (*format == *(printf[h].p))
-		{
-			return (printf[h].f);
-		}
+		if (*funcs[i].p == *format)
+			return (funcs[i].f);
 	}
-
 	return (NULL);
 }
