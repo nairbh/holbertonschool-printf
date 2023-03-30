@@ -23,6 +23,7 @@ int (*get_func(const char *format))(va_list)
 		{"X", print_hex_upper},
 		{"!", print_exc},
 		{"K", print_K},
+		{"b", print_binary},
 		{NULL, NULL}
 	};
 
