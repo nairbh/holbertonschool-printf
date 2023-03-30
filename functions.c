@@ -6,17 +6,27 @@
  *
  * Return: The number of characters printed
  */
+/**
+ * print_address - Print an address in hexadecimal
+ * @args: va_list containing the address to be printed
+ *
+ * Return: The number of characters printed
+ */
 int print_address(va_list args)
 {
 	unsigned long n = (unsigned long)va_arg(args, void *);
 	int count = 0;
 
-	count += _putchar('0');
+	if (n == 0)
+	{
+	count += print_string("(nil)");
+	return (count);
+	}
 
+	count += _putchar('0');
 	count += _putchar('x');
 
 	count += print_hex_lower_helper(n);
-
 	return (count);
 }
 /**
