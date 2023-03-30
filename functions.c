@@ -87,5 +87,5 @@ int print_hex_upper_helper(unsigned int n)
 int print_K(va_list args)
 {
 	(void)args;
-	return (_putchar('!'));
+	return (_putchar('%') + _putchar('K'));
 }
