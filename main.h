@@ -33,4 +33,6 @@ int print_hex_upper_helper(unsigned int n);
 int print_K(va_list args);
 int print_exc(va_list args);
 int print_handle(const char *s);
+int print_binary(va_list args);
+int print_binary_helper(unsigned int n, int count);
 #endif /* MAIN_H */
