@@ -6,7 +6,8 @@
  */
 
 int _printf(const char *format, ...)
-{	va_list args;
+{
+	va_list args;
 	int (*printer)(va_list);
 	int count = 0;
 
@@ -19,7 +20,6 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			printer = get_func(format);
-
 			if (printer == NULL)
 			{
 				if (*format == '\0')

@@ -10,7 +10,12 @@ int print_exc(va_list args)
 	(void)args;
 	return (_putchar('%') + _putchar('!'));
 }
-
+/**
+* print_handle - Print a string to stdout
+* @s: The string to be printed
+* If @s is NULL, print "(null)" instead.
+* Return: The number of characters printed
+*/
 int print_handle(const char *s)
 {
     int count = 0;
