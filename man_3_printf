@@ -19,6 +19,7 @@ The format string can contain the following conversion specifiers:
 - %u:	Print an unsigned decimal integer
 - %o:	Print an unsigned octal number
 - %x:	Print an unsigned hexadecimal number (lowercase)
+- %X:	Print an unsigned hexadecimal number (uppercase)
 - %p:	Print a pointer address
 
 RETURN VALUE
