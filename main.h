@@ -31,5 +31,5 @@ int print_unsigned(va_list args);
 int print_hex_upper(va_list args);
 int print_hex_upper_helper(unsigned int n);
 int print_K(va_list args);
-int print_exclamation(va_list args);
+int print_exc(va_list args);
 #endif /* MAIN_H */
