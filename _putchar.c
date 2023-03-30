@@ -76,7 +76,7 @@ int print_hex_lower(va_list args)
  *
  * Return: The number of characters printed
  */
-int print_hex_lower_helper(unsigned int n)
+int print_hex_lower_helper(unsigned long n)
 {
 	int count = 0;
 	int digit;

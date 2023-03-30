@@ -25,7 +25,9 @@ int print_unsigned_int(unsigned int n);
 int print_octal(va_list args);
 int print_octal_helper(unsigned int n);
 int print_hex_lower(va_list args);
-int print_hex_lower_helper(unsigned int n);
+int print_hex_lower_helper(unsigned long n);
 int print_address(va_list args);
 int print_unsigned(va_list args);
+int print_hex_upper(va_list args);
+int print_hex_upper_helper(unsigned int n);
 #endif /* MAIN_H */

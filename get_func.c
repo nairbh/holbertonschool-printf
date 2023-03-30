@@ -20,6 +20,7 @@ int (*get_func(const char *format))(va_list)
 		{"o", print_octal},
 		{"x", print_hex_lower},
 		{"p", print_address},
+		{"X", print_hex_upper},
 		{NULL, NULL}
 	};
 

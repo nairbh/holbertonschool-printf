@@ -35,3 +35,46 @@ int print_unsigned(va_list args)
 
 	return (count);
 }
+/**
+ * print_hex_upper - Print a hexadecimal number in uppercase
+ * @args: va_list containing the hexadecimal number to be printed
+ *
+ * Return: The number of characters printed
+ */
+int print_hex_upper(va_list args)
+{
+	unsigned int n = va_arg(args, unsigned int);
+	int count = 0;
+
+	if (n == 0)
+	{
+		count += _putchar('0');
+		return (count);
+	}
+
+	count += print_hex_upper_helper(n);
+
+	return (count);
+}
+/**
+ * print_hex_upper_helper - Recursive helper function for print_hex_lower
+ * @n: The unsigned integer to be printed in hexadecimal
+ *
+ * Return: The number of characters printed
+ */
+int print_hex_upper_helper(unsigned int n)
+{
+	int count = 0;
+	int digit;
+
+	if (n / 16)
+		count += print_hex_upper_helper(n / 16);
+
+	digit = n % 16;
+	if (digit < 10)
+		count += _putchar(digit + '0');
+	else
+		count += _putchar(digit - 10 + 'A');
+
+	return (count);
+}
