@@ -8,5 +8,5 @@
 int print_exc(va_list args)
 {
 	(void)args;
-	return (_putchar('%') _putchar('!'));
+	return (_putchar('%') + _putchar('!'));
 }
