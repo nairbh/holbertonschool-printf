@@ -2,15 +2,10 @@
 
 /**
  * print_address - Print an address in hexadecimal
- * @args: va_list containing the address to be printed
  *
- * Return: The number of characters printed
- */
-/**
- * print_address - Print an address in hexadecimal
- * @args: va_list containing the address to be printed
+ * @addr: The address to be printed
  *
- * Return: The number of characters printed
+ * Prints the given address in hexadecimal format to standard output.
  */
 int print_address(va_list args)
 {
