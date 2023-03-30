@@ -88,9 +88,9 @@ int print_exclamation(va_list args)
 {
     (void)args;
 
-    return (_putchar('!'));
+    return (_putchar("%!"));
 }/**
- * print_K - prints the capital letter K
+ * print_K - prints the capital letter %K
  * @args: va_list (unused in this function)
  *
  * Return: 1 (the number of characters printed)
@@ -99,5 +99,5 @@ int print_K(va_list args)
 {
 	(void)args;
 
-	return (_putchar('K'));
+	return (_putchar("%K"));
 }
