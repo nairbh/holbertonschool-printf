@@ -2,10 +2,10 @@
 /**
  * print_address - Print the hexadecimal representation of a memory address
  *
- * @args: A va_list containing the argument to be printed, which should be a memory address
+ * @args: A va_list containing the argument to be printed
  *
- * This function takes a va_list containing the argument to be printed, which
- * should be a memory address, and prints the hexadecimal representation of
+ * This function takes a va_list containing the argument to be print
+ * should be a memory address, and prints the hexadecimal
  * the address to standard output.
  *
  * Return: The number of characters printed
