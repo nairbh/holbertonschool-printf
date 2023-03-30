@@ -19,7 +19,7 @@ int print_address(va_list args)
 
 	if (n == 0)
 	{
-	count += print_string("(nil)");
+	count += print_handle("(nil)");
 	return (count);
 	}
 
