@@ -22,7 +22,7 @@ int (*get_func(const char *format))(va_list)
 		{"p", print_address},
 		{"X", print_hex_upper},
 		{"!", print_exclamation},
-		{"K", int print_K},
+		{"K", print_K},
 		{NULL, NULL}
 	};
 
