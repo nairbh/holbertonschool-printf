@@ -21,6 +21,8 @@ int (*get_func(const char *format))(va_list)
 		{"x", print_hex_lower},
 		{"p", print_address},
 		{"X", print_hex_upper},
+		{"!", print_exclamation},
+		{"K", int print_K},
 		{NULL, NULL}
 	};
 
