@@ -92,4 +92,3 @@ int print_hex_lower_helper(unsigned int n)
 
 	return (count);
 }
-

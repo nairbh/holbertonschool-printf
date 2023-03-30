@@ -1,0 +1,30 @@
+NAME
+_printf - print formatted data to stdout
+
+SYNOPSIS
+#include "main.h"
+
+int _printf(const char *format, ...);
+
+DESCRIPTION
+_printf formats and outputs data, similar to the standard printf function.
+The function takes in a format string and a variable number of arguments to be printed.
+
+
+The format string can contain the following conversion specifiers:
+- %c:	Print a single character
+- %s:	Print a string of characters
+- %d:	Print a signed decimal integer
+- %i:	Print a signed decimal integer
+- %u:	Print an unsigned decimal integer
+- %o:	Print an unsigned octal number
+- %x:	Print an unsigned hexadecimal number (lowercase)
+- %p:	Print a pointer address
+
+RETURN VALUE
+On success, the number of characters printed is returned. On error, -1 is returned.
+
+AUTHOR
+This function was created by Nicolas and Houcine.
+
+COPYRIGHT
