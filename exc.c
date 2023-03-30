@@ -18,18 +18,19 @@ int print_exc(va_list args)
 */
 int print_handle(const char *s)
 {
-    int count = 0;
+	int count = 0;
 
-    if (s == NULL)
-        s = "(null)";
+	if (s == NULL)
 
-    while (*s)
-    {
-        count += _putchar(*s);
-        s++;
-    }
+		s = "(null)";
 
-    return (count);
+	while (*s)
+	{
+		count += _putchar(*s);
+		s++;
+	}
+
+	return (count);
 }
 /**
  * print_binary - Print a binary number
@@ -39,12 +40,13 @@ int print_handle(const char *s)
  */
 int print_binary(va_list args)
 {
-    unsigned int n = va_arg(args, unsigned int);
-    int count = 0;
+	unsigned int n = va_arg(args, unsigned int);
 
-    count = print_binary_helper(n, count);
+	int count = 0;
 
-    return (count);
+	count = print_binary_helper(n, count);
+
+	return (count);
 }
 
 /**
@@ -56,10 +58,11 @@ int print_binary(va_list args)
  */
 int print_binary_helper(unsigned int n, int count)
 {
-    if (n / 2)
-        count = print_binary_helper(n / 2, count);
+	if (n / 2)
 
-    count += _putchar((n % 2) + '0');
+		count = print_binary_helper(n / 2, count);
 
-    return (count);
+	count += _putchar((n % 2) + '0');
+
+	return (count);
 }

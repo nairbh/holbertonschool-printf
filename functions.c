@@ -1,11 +1,14 @@
 #include "main.h"
-
 /**
- * print_address - Print an address in hexadecimal
+ * print_address - Print the hexadecimal representation of a memory address
  *
- * @addr: The address to be printed
+ * @args: A va_list containing the argument to be printed, which should be a memory address
  *
- * Prints the given address in hexadecimal format to standard output.
+ * This function takes a va_list containing the argument to be printed, which
+ * should be a memory address, and prints the hexadecimal representation of
+ * the address to standard output.
+ *
+ * Return: The number of characters printed
  */
 int print_address(va_list args)
 {
