@@ -22,5 +22,9 @@ int print_percent(va_list args);
 int print_decimal(va_list args);
 int _putchar(char c);
 int print_unsigned_int(unsigned int n);
-#endif /* MAIN_H */
+int print_octal(va_list args);
+int print_octal_helper(unsigned int n);
+int print_hex_lower(va_list args);
+int print_hex_lower_helper(unsigned int n);
 
+#endif /* MAIN_H */

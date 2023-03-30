@@ -16,6 +16,8 @@ int (*get_func(const char *format))(va_list)
 		{"%", print_percent},
 		{"d", print_decimal},
 		{"i", print_decimal},
+			{"o", print_octal},
+	{"x", print_hex_lower},
 		{NULL, NULL}
 	};
 
