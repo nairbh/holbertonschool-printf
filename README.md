@@ -1,3 +1,4 @@
+![331125_630361](https://user-images.githubusercontent.com/124582867/229380110-7673c718-e712-4ac6-aa56-c816d5535188.png)
 
 <h1> C-Printf</h1></p>
 
@@ -60,6 +61,8 @@ These are all the tasks of this project, the ones that are completed link to the
 
 2. Just because it's in print doesn't mean it's the gospel
 * Create a man page for your function
+
+![Flow drawio](https://user-images.githubusercontent.com/124582867/229379968-3ba030ac-3e74-4f43-a51d-b5dc8f2e9374.png)
 
 <h3>Authors</h3>
 
