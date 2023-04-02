@@ -1,31 +1,27 @@
-NAME
-_printf - print formatted data to stdout
-
-SYNOPSIS
-#include "main.h"
-
-int _printf(const char *format, ...);
-
-DESCRIPTION
-_printf formats and outputs data, similar to the standard printf function.
-The function takes in a format string and a variable number of arguments to be printed.
-
-
-The format string can contain the following conversion specifiers:
-- %c:	Print a single character
-- %s:	Print a string of characters
-- %d:	Print a signed decimal integer
-- %i:	Print a signed decimal integer
-- %u:	Print an unsigned decimal integer
-- %o:	Print an unsigned octal number
-- %x:	Print an unsigned hexadecimal number (lowercase)
-- %X:	Print an unsigned hexadecimal number (uppercase)
-- %p:	Print a pointer address
-
-RETURN VALUE
-On success, the number of characters printed is returned. On error, -1 is returned.
-
-AUTHOR
-This function was created by Nicolas and Houcine.
-
-COPYRIGHT
+.TH man 3 "27 March 2023" "holberton school" "_printf man page"
+.SH NAME
+.B _printf
+- A simple re-creation of the printf function
+.SH SYNOPSIS
+To use this function the #include "main.h" header is needed.
+.SH DESCRIPTION
+The _printf() function produces output according to a format which is described
+below. This function write its output to the stdout, the standard output stream.
+.SH USAGE
+To use _printf you have to use the following key characters preceeded by % symbol.
+.RS 3
+%c: To be used to print characters
+.RS 0
+%s: To be used to print strings
+.RS 0
+%d: To print integers of max and min size of an int type
+.SH RETURN VALUES
+The _printf() function returns an integer representing the number of symbols
+printed not counting \0 for the string.
+.SH SEE ALSO
+.I printf(3)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Houcine Nair Benrokia //
+Nicolas De Sousa
